@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222d;
+      --text: #e8ecf1;
+      --muted: #8b98a8;
+      --accent: #3dd6c3;
+      --accent-dim: rgba(61, 214, 195, 0.12);
+      --border: rgba(255, 255, 255, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 214, 195, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(100, 120, 200, 0.08), transparent);
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: clamp(2rem, 8vw, 4rem) 1.5rem;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .lead {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      color: var(--muted);
+      max-width: 36ch;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-top: 2rem;
+      box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 1.25rem;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.65rem 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    li:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(61, 214, 195, 0.35);
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Simple page</span>
+      <h1>A quiet corner <em>with room to breathe</em></h1>
+      <p class="lead">
+        One HTML file, a little CSS, and typography that does the heavy lifting.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>What you get</h2>
+      <p>
+        Dark theme, soft gradients, and a serif display paired with a readable sans body font.
+      </p>
+      <ul>
+        <li>Responsive spacing with clamp() so it scales on phones and desktops.</li>
+        <li>Subtle depth: borders, shadow, and a glow on the accent dots.</li>
+        <li>No build step—open the file in a browser and you are done.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Edit <code style="color: var(--text);">index.html</code> to change copy or colors in <code style="color: var(--text);">:root</code>.
+    </footer>
+  </div>
+</body>
+</html>
